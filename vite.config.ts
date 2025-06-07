@@ -4,5 +4,5 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/vue/', // Replace with your repository name
+  base: '/', // Root path for Vercel deployment
 })
