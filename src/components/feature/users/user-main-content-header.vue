@@ -110,12 +110,10 @@ const handleSortUpdate = (value: string | number): void => {
 
 // Computed options for selects
 const cityOptions = computed(() => [
-  '',
   ...props.uniqueCities
 ])
 
 const companyOptions = computed(() => [
-  '',
   ...props.uniqueCompanies
 ])
 
