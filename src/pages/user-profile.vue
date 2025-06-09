@@ -160,8 +160,8 @@ import {
 import UserDetailHeader from '../components/feature/user-details/user-detail-header.vue'
 import UserDetailMain from '../components/feature/user-details/user-detail-main.vue'
 import { UiButton } from '../components/ui'
-import { useUserDetail } from '../hooks/useUserDetail'
-import { useUsers } from '../hooks/useUsers'
+import { useUserDetail } from '../composables/useUserDetail'
+import { useUsers } from '../composables/useUsers'
 
 // Router
 const route = useRoute()
