@@ -19,7 +19,7 @@ const selectedCompany = ref('')
 const sortBy = ref<'name' | 'email' | 'company' | 'city'>('name')
 const sortOrder = ref<'asc' | 'desc'>('asc')
 
-export const useUserStore = () => {
+export const useUsers = () => {
   // Computed values
   const uniqueCities = computed(() => {
     const cities = allUsers.value.map(user => user.address.city)
@@ -184,7 +184,7 @@ export const useUserStore = () => {
 
   return {
     // State
-    users: allUsers.value,
+    users: allUsers,
     loading,
     loadingMore,
     error,

@@ -1,5 +1,6 @@
 // Export all types from a central location
 export type * from './user'
+export type * from './auth'
 
 // Common utility types
 export interface BaseEntity {

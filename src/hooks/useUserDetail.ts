@@ -6,7 +6,7 @@ const currentUser = ref<User | null>(null)
 const loading = ref(false)
 const error = ref<string | null>(null)
 
-export const useUserDetailStore = () => {
+export const useUserDetail = () => {
   // Computed values
   const isLoaded = computed(() => !loading.value && !error.value && currentUser.value !== null)
   

@@ -160,16 +160,16 @@ import {
 import UserDetailHeader from '../components/feature/user-details/user-detail-header.vue'
 import UserDetailMain from '../components/feature/user-details/user-detail-main.vue'
 import { UiButton } from '../components/ui'
-import { useUserDetailStore } from '../stores/userDetailStore'
-import { useUserStore } from '../stores/userStore'
+import { useUserDetail } from '../hooks/useUserDetail'
+import { useUsers } from '../hooks/useUsers'
 
 // Router
 const route = useRoute()
 const router = useRouter()
 
 // Stores
-const userDetailStore = useUserDetailStore()
-const userStore = useUserStore()
+const userDetail = useUserDetail()
+const user = useUsers()
 
 // Computed
 const userId = computed(() => {
@@ -189,12 +189,12 @@ const {
   sendEmail,
   callUser,
   visitWebsite
-} = userDetailStore
+} = userDetail
 
 // Methods
 const fetchUserProfile = async (): Promise<void> => {
   // Try to get user from userStore first (if available)
-  const storeUser = userStore.users.find(u => u.id === userId.value)
+  const storeUser = user.users.value.find(u => u.id === userId.value)
   
   if (storeUser) {
     setUser(storeUser)

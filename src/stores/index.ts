@@ -1,3 +1,2 @@
-// Export all stores from this index file
-export { useUserStore } from './userStore'
-export { useUserDetailStore } from './userDetailStore'
+export { useAuthStore } from './authStore'
+export type { AuthUser, LoginCredentials, RegisterData } from './authStore' 

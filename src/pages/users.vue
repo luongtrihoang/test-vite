@@ -60,7 +60,7 @@ import UserHeader from '../components/feature/users/user-header.vue'
 import UserMainContent from '../components/feature/users/user-main-content.vue'
 import UserGrid from '../components/feature/users/user-grid.vue'
 import { UiButton } from '../components/ui'
-import { useUserStore } from '../stores/userStore'
+import { useUsers } from '../hooks/useUsers'
 import type { User } from '../types/user'
 
 // Router
@@ -85,7 +85,7 @@ const {
   clearFilters,
   toggleSortOrder,
   resetPagination
-} = useUserStore()
+} = useUsers()
 
 // Refs
 const infiniteScrollTrigger = ref<HTMLElement>()
